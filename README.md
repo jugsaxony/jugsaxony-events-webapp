@@ -1,2 +1,2 @@
-# jugsaxony-events-webapp
-JUG Saxony Events WebApp
+# JUG Saxony Events WebApp 
+Progressive Web App auf Basis von Ionic 3 für den JUG Saxony Veranstaltungskalender.
