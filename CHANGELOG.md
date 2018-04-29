@@ -5,7 +5,7 @@
 * auf iOS-Geräten wird die Status-Bar jetzt korrekt angezeigt und eingefärbt
 * die Anzeige der Frist, wann eine Veranstaltung stattfindet, war stellenweise fehlerhaft
 * der An-/Abmelde-FAB wurde um einen Progress-Indicator ergänzt
-* die Scolling-Problem im Slide-In-Menü wurden behoben
+* das Scolling-Problem im Slide-In-Menü wurden behoben
 
 ### Bekannte Probleme
 * im iOS-Standalone-Modus (aka. Add-to-Homescreen) wird die App-Shell nicht aktualisiert, wenn eine neue Version vorliegt
