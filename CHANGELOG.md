@@ -1,6 +1,6 @@
-## [0.1.2-beta] (2018-04-15)
+## 0.1.2-beta (2018-04-15)
 
-### Bug Fixes
+### Bug-Fixes
 * auf iOS-Geräten werden Animationen jetzt angezeigt
 * auf iOS-Geräten wird die Status-Bar jetzt korrekt angezeigt und eingefärbt
 * die Anzeige der Frist, wann eine Veranstaltung stattfindet, war stellenweise fehlerhaft
