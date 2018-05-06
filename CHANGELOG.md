@@ -1,3 +1,12 @@
+## 0.1.4-beta (2018-05-06)
+
+### Bug-Fixes
+* die "Wie könnt Ihr uns unterstützen"-Karte hat noch gefehlt
+* das Force-Update im Service-Worker wurde wieder entfernt, da es nicht funktioniert
+
+### Bekannte Probleme
+* Möglichweise aktualisiert sich die App nicht mehr. Android-Nutzer können unter Chrome -> Einstellungen -> Datenschutz -> Browserdaten löschen (ganz am Ende der Liste) -> \[x] "Bilder und Dateien im Cache" den App-Cache zurücksetzen. Danach muss dann die App noch einmal via App-Switcher zwangsweise beendet werden.
+
 ## 0.1.3-beta (2018-05-03)
 
 ### Bug-Fixes
