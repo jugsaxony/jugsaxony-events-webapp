@@ -1,7 +1,6 @@
 ##  Aufsetzen der Umgebung
 
-    npm update -D -E
-    npm update -E
+    npm install
 
 ## Ausführen des DEV-Builds
 
