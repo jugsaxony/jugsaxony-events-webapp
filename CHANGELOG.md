@@ -1,3 +1,11 @@
+## 0.1.5-beta (2018-07-01)
+
+### Bug-Fixes
+* Upgrade des Service-Workers sollte jetzt auch aus der App heraus funktionieren
+* calShare/aCalender benutzt jetzt Local-Time, da die UTC-Links nicht korrekt verarbeitet werden
+* die Swipe-Back-Geste auf iOS führt jetzt nicht mehr zu einer leeren Seite
+* unsere Datenschutzerklärung ist jetzt auch in der App verfügbar
+
 ## 0.1.4-beta (2018-05-06)
 
 ### Bug-Fixes
