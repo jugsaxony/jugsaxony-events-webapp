@@ -22,7 +22,7 @@ Wir als Verein haben uns daher entschlossen, dass unsere Zeit besser darin inves
 
 ---
 
-**Q**: Ich möchte auch weiterhin meine Gmail-Adresse zum Anmelden benutzen. Kann für mich eine Ausnahme bei den Bestätigungsemails gemacht werden.
+**Q**: Ich möchte auch weiterhin meine Gmail-Adresse zum Anmelden benutzen. Kann für mich eine Ausnahme bei den Bestätigungsemails gemacht werden?
 
 **A**: Nein. Wir arbeiten ehrenamtlich. Aufwand und Nutzen steht hier in keinem Verhältnis.
 
