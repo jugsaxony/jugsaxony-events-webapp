@@ -1,5 +1,8 @@
 ## 0.2.2-beta (2019-05-01)
 
+### Features
+* Job-Wall mit regelmäßig wechselnden Job-Angeboten unserer Fördermitglieder
+
 ### Bug-Fixes
 * Bessere iPhone-X-Homescreen-Unterstützung
 * Schönheitskorrekturen
