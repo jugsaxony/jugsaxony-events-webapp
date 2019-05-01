@@ -1,3 +1,9 @@
+## 0.2.2-beta (2019-05-01)
+
+### Bug-Fixes
+* Bessere iPhone-X-Homescreen-Unterstützung
+* Schönheitskorrekturen
+
 ## 0.1.5-beta (2018-07-01)
 
 ### Bug-Fixes
