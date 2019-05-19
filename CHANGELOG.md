@@ -1,3 +1,8 @@
+## 0.2.6-beta (2019-05-19)
+
+### Features
+* Unterstützung für Apple Maps, Here WeGo und Maps.Me
+
 ## 0.2.2-beta (2019-05-01)
 
 ### Features
