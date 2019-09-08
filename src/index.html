@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <title>JUG Saxony Veranstaltungen und Job Wall</title>
+  <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
+  <link rel="icon" sizes="512x512" href="assets/icons/logo_512_w.png">
+  <meta name="theme-color" content="#00803d">
+  <meta name="application-name" content="JUG Saxony" />
+  <meta name="apple-mobile-web-app-title" content="JUG Saxony">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="apple-touch-icon" href="assets/icons/logo_180_w.png">
+  <meta name="msapplication-TileImage" content="assets/icons/logo_144_ti.png">
+  <meta name="msapplication-TileColor" content="#00803d">
+  <meta name="msapplication-tooltip" content="JUG Saxony Veranstaltungen und Job Wall">
+  <meta name="msapplication-tap-highlight" content="no">
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(registration => console.log('Service worker registered', registration))
+        .catch(err => console.error('Error registering service worker', err));
+    }
+  </script>
+  <link href="build/main.css" rel="stylesheet">
+</head>
+<body>
+  <ion-app></ion-app>
+  <script src="build/polyfills.js"></script>
+  <script src="build/vendor.js"></script>
+  <script src="build/main.js"></script>
+</body>
+</html>

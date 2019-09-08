@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-buttons start>
+      <button ion-button (click)="dismiss()">
+        <ion-icon name="arrow-down" showWhen="ios"></ion-icon>
+        <ion-icon name="close" hideWhen="ios"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Über uns</ion-title>
+  </ion-navbar>
+  <ion-toolbar no-border-top color="primary">
+    <ion-segment [(ngModel)]="page" color="light">
+      <ion-segment-button value="aboutUsPage" (click)="scrollToTop()">
+        Wir über uns
+      </ion-segment-button>
+      <ion-segment-button value="imprintPage" (click)="scrollToTop()">
+        Impressum
+      </ion-segment-button>
+      <ion-segment-button value="dataProtectionPage" (click)="scrollToTop()">
+        Datenschutzerklärung
+      </ion-segment-button>
+      <ion-segment-button value="faqPage" (click)="scrollToTop()">
+        FAQ
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+  <jug-navbar-activity-indicator *ngIf="!aboutPage || !imprintPage || !dataProtectionPage || !faqPage"></jug-navbar-activity-indicator>
+</ion-header>
+
+<ion-content padding>
+  <div [ngSwitch]="page">
+    <div [innerHTML]="aboutUsPage" *ngSwitchCase="'aboutUsPage'"></div>
+    <div [innerHTML]="imprintPage" *ngSwitchCase="'imprintPage'"></div>
+    <div [innerHTML]="dataProtectionPage" *ngSwitchCase="'dataProtectionPage'"></div>
+    <div [innerHTML]="faqPage" *ngSwitchCase="'faqPage'"></div>
+  </div>
+</ion-content>

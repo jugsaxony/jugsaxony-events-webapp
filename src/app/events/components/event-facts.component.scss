@@ -1,0 +1,141 @@
+jug-event-facts {
+    ion-label {
+        white-space: initial;
+    }
+
+    .list {
+        margin: initial;
+    }
+
+    .description {
+        background-color: white;
+    }
+
+    .booking-state {
+        font-weight: bold;
+    }
+
+    .card-top {
+        position: relative;
+
+        .curtain {
+            position: absolute;
+            z-index: 100;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(135deg, #008a4c, #008a4c 10px, #4c8a4c 10px, #4c8a4c 20px) !important;
+        }
+
+        img {
+            width: 100%;
+            display: block;
+        }
+
+        .messages {
+            position: absolute;
+            z-index: 102;
+            top: $jugs-card-padding-end;
+            right: $jugs-card-padding-end;
+            text-align: right;
+            padding-left: $jugs-card-padding-start;
+
+            .registration {
+                .button-outline {
+                    background-color: rgba(255, 255, 255, 0.4)
+                }
+
+                button[disabled] {
+                    opacity: initial;
+                }
+            }
+
+            .booking-state {
+                .button-outline {
+                    background-color: rgba(255, 255, 255, 0.4)
+                }
+
+                button[disabled] {
+                    opacity: initial;
+                }
+            }
+
+            .button {
+                white-space: initial;
+                line-height: initial;
+                height: initial;
+                padding: 12px;
+            }
+        }
+
+        .caption {
+            position: absolute;
+            z-index: 101;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            padding: $jugs-card-padding-top $jugs-card-padding-end $jugs-card-padding-bottom $jugs-card-padding-start;
+
+            &.registered {
+                background-color: rgba(color($colors, primary, base), 0.8);
+            }
+
+            .title {
+                font-size: 2.5rem;
+                font-weight: bold;
+                padding-top: 3px;
+                color: #fff;
+            }
+
+            .subtitle {
+                font-size: 1.6rem;
+                line-height: 2.5rem;
+                color: #fff;
+            }
+        }
+
+        ion-fab[bottom] {
+            bottom: -25px;
+        }
+    }
+
+    .description {
+        h1 {
+            font-size: 2.2rem;
+        }
+
+        h2 {
+            font-size: 2.0rem;
+        }
+
+        h3 {
+            font-size: 1.8rem;
+        }
+
+        p:first-child {
+            margin-top: initial;
+        }
+    }
+
+    .text-emphatic {
+        font-weight: bold;
+    }
+}
+
+.md,
+.wp {
+    jug-event-facts {
+        ion-icon[name='people'][item-left] {
+            margin-right: 4px;
+        }
+    }
+}
+
+.ios {
+    jug-event-facts {
+        ion-icon[name='people'][item-left] {
+            margin-right: 12px;
+        }
+    }
+}

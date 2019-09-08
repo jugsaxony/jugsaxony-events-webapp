@@ -1,0 +1,20 @@
+job-offer-card {
+
+    .carousel-card {
+        width: 20rem;
+    }
+
+    .card-content {
+        margin-top: 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        text-align: left;
+        hyphens: auto;
+    }
+
+    .location {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}

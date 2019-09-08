@@ -1,0 +1,2 @@
+<ion-badge color="secondary" *ngIf="offline$ | async">Offline</ion-badge>
+<ion-badge *ngIf="updateAvailable$ | async" (click)="showUpdateDialog()">Update</ion-badge>

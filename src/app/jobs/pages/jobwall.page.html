@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Job Wall</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let company of spotlightCompanies" (click)="onCardClick(company.id)">
+    <div class="card-top">
+      <img [src]="company.appImageUrl">
+      <div class="caption">
+        <div class="subtitle">Fördermitglied im Spotlight</div>
+        <div class="title">{{ company.name }}</div>
+      </div>
+    </div>
+    <div class="jobs">
+      <ion-item text-wrap>
+        <h2>Hier stellen wir regelmäßig eines unserer Fördermitglieder mit interessanten Jobangeboten vor.</h2>
+        <p class="offers" *ngIf="company.jobOffers, else noJobOffers">{{ company.jobOffers.length }} Stellenanzeigen in {{ company.jobLocations | enumeration }}</p>
+      </ion-item>
+      <ng-template #noJobOffers>
+        <p class="searched">Derzeitig sind keine Stellenanzeigen für dieses Unternehmen vorhanden</p>
+      </ng-template>
+    </div>
+    <ion-row no-padding class="top-border">
+      <ion-col text-right>
+        <button ion-button color="dark" clear small icon-start>
+          <ion-icon name="share-alt"></ion-icon>
+          Mehr erfahren
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+</ion-content>

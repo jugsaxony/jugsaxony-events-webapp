@@ -1,0 +1,77 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="back"></ion-icon>
+    </button>
+    <ion-title *ngIf="company">{{ company.name }}</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <div class="description" *ngIf="company">
+    <div class="card-top">
+      <img [src]="company.appImageUrl">
+      <div class="caption">
+        <div class="subtitle">Fördermitglied im Spotlight</div>
+        <div class="title">{{ company.name }}</div>
+      </div>
+    </div>
+    <div class="claim">
+      <p [innerHtml]="company.claim"></p>
+    </div>
+    <div class="job-offers">
+      <h2 *ngIf="company.jobOffers">Stellenanzeigen der {{ company.name }}</h2>
+      <div class="job-grid" showWhen="core">
+        <job-offer-card [jobOffer]="jobOffer" (click)="onCardClick(jobOffer.id)"
+          *ngFor="let jobOffer of company.jobOffers"></job-offer-card>
+      </div>
+      <ion-slides class="job-carousel" slidesPerView="1.6" hideWhen="core">
+        <ion-slide class="carousel-slide" *ngFor="let jobOffer of company.jobOffers">
+          <job-offer-card [jobOffer]="jobOffer" (click)="onCardClick(jobOffer.id)"></job-offer-card>
+        </ion-slide>
+      </ion-slides>
+    </div>
+    <div class="claim">
+      <h2 *ngIf="company.statement">Wir und die JUG Saxony</h2>
+      <p *ngIf="company.statement" [innerHTML]="company.statement"></p>
+    </div>
+    <div class="contact-options">
+      <h2>Kontaktiere uns</h2>
+      <ion-slides *ngIf="showContactOptionSlider, else fewLinks" slidesPerView="6.5">
+        <ion-slide *ngIf="company.careerPageUrl">
+          <social-button type="homepage" [url]="company.careerPageUrl"></social-button>
+        </ion-slide>
+        <ion-slide *ngIf="company.email">
+          <social-button type="email" [url]="'mailto:' + company.email"></social-button>
+        </ion-slide>
+        <ion-slide *ngIf="company.twitter">
+          <social-button type="twitter" [url]="company.twitter"></social-button>
+        </ion-slide>
+        <ion-slide *ngIf="company.instagram">
+          <social-button type="instagram" [url]="company.instagram"></social-button>
+        </ion-slide>
+        <ion-slide *ngIf="company.facebook">
+          <social-button type="facebook" [url]="company.facebook"></social-button>
+        </ion-slide>
+        <ion-slide *ngIf="company.xing">
+          <social-button type="xing" [url]="company.xing"></social-button>
+        </ion-slide>
+        <ion-slide *ngIf="company.linkedIn">
+          <social-button type="linkedin" [url]="company.linkedIn"></social-button>
+        </ion-slide>
+        <ion-slide *ngIf="company.youtube">
+          <social-button type="youtube" [url]="company.youtube"></social-button>
+        </ion-slide>
+      </ion-slides>
+      <ng-template #fewLinks>
+        <social-button *ngIf="company.careerPageUrl" type="homepage" [url]="company.careerPageUrl"></social-button>
+        <social-button *ngIf="company.email" type="email" [url]="'mailto:' + company.email"></social-button>
+        <social-button *ngIf="company.twitter" type="twitter" [url]="company.twitter"></social-button>
+        <social-button *ngIf="company.instagram" type="instagram" [url]="company.instagram"></social-button>
+        <social-button *ngIf="company.facebook" type="facebook" [url]="company.facebook"></social-button>
+        <social-button *ngIf="company.xing" type="xing" [url]="company.xing"></social-button>
+        <social-button *ngIf="company.linkedIn" type="linkedin" [url]="company.linkedIn"></social-button>
+        <social-button *ngIf="company.youtube" type="youtube" [url]="company.youtube"></social-button>
+      </ng-template>
+    </div>
+  </div>
+</ion-content>

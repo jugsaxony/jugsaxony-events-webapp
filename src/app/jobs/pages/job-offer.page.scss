@@ -1,0 +1,71 @@
+page-job-offer {
+    .description {
+        background-color: white;
+    }
+
+    .card-top {
+        position: relative;
+
+        img {
+            width: 100%;
+            display: block;
+        }
+
+        .caption {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            bottom: 0px;
+            padding: $jugs-card-padding-top $jugs-card-padding-end $jugs-card-padding-bottom $jugs-card-padding-start;
+
+            .title {
+                font-size: 2.5rem;
+                font-weight: bold;
+                padding-top: 3px;
+                color: #fff;
+            }
+
+            .subtitle {
+                font-size: 1.6rem;
+                line-height: 2.5rem;
+                color: #fff;
+            }
+        }
+    }
+
+    .offer {
+        padding-left: 1rem;
+        padding-right: 1rem;
+
+        .fact-item {
+            display: inline-block;
+            width: 45%;
+        }
+    }
+
+    .actions {
+        width: 100%;
+        padding-bottom: 4rem;
+        display: flex;
+
+        .button {
+            flex-grow: 1;
+            text-align: center;
+            width: 90%;
+        }
+    }
+
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 2.0rem;
+    }
+
+    h3 {
+        font-size: 1.8rem;
+    }
+}

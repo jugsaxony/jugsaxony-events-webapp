@@ -1,0 +1,41 @@
+<div class="card-top" (click)="onCardClick('card')">
+    <div class="curtain" *ngIf="eventData.entity.cancelled"></div>
+    <img [src]="eventData.entity.imageUrl">
+    <div class="messages">
+        <div class="booking-state" *ngIf="eventData.entity.bookingState">
+            <button ion-button disabled icon-left color="danger">
+                <ion-icon name="notifications-outline"></ion-icon>
+                {{eventData.entity.bookingState}}
+            </button>
+        </div>
+        <div class="registration" [@registrationState]="registration" *ngIf="eventData.registration && eventData.currentOrFuture">
+            <button ion-button disabled icon-left color="primary">
+                <ion-icon name="checkmark-circle-outline"></ion-icon>
+                Juhu, ich bin angemeldet
+            </button>
+        </div>
+    </div>
+    <div class="caption" [class.registered]="!!eventData.registration">
+        <div class="subtitle" [innerHtml]="eventData.entity.speaker"></div>
+        <div class="title" [innerHtml]="eventData.entity.title"></div>
+    </div>
+    <ng-content select="ion-fab"></ng-content>
+</div>
+<ion-list>
+    <ion-item (click)="onDetailsClick('location')">
+        <ion-icon name="pin" item-left large></ion-icon>
+        <h2 style="padding-right: 40px;">{{eventData.entity.site}}</h2>
+        <p>{{eventData.entity.address}}</p>
+    </ion-item>
+    <ion-item (click)="onDetailsClick('time')">
+        <ion-icon name="calendar" item-left large></ion-icon>
+        <h2>{{eventData.entity.startTime | date: "EEEE, dd. MMM y HH:mm"}} Uhr</h2>
+        <p>{{eventData.dateDistance | toFirstUpper}}</p>
+    </ion-item>
+    <ion-item (click)="onDetailsClick('event')">
+        <ion-icon name="people" item-left large></ion-icon>
+        <h2>{{eventData.entity.type}}</h2>
+        <p>{{eventData.entity.hint}}<span class="text-emphatic" *ngIf="eventData.entity.bookingState"> {{eventData.entity.bookingState}}</span></p>
+    </ion-item>
+</ion-list>
+<div class="description" padding [innerHTML]="eventData.entity.description"></div>

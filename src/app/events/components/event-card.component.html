@@ -1,0 +1,27 @@
+<ion-card>
+    <div class="card-image" (click)="onCardClick('card')">
+        <img [src]="eventData.entity.imageUrl">
+        <div class="messages">
+        </div>
+        <div class="caption" [class.registered]="!!eventData.registration">
+            <div class="subtitle" [innerHtml]="eventData.entity.speaker"></div>
+            <div class="title" [innerHtml]="eventData.entity.title"></div>
+        </div>
+    </div>
+    <ion-item (click)="onDetailsClick('location')">
+        <h2>{{eventData.entity.site}}</h2>
+        <p>{{eventData.entity.address}}</p>
+    </ion-item>
+    <ion-item (click)="onDetailsClick('time')">
+        <h2>{{eventData.entity.startTime | date: "EEEE, dd. MMM y HH:mm"}} Uhr</h2>
+        <p>{{eventData.dateDistance | toFirstUpper}}</p>
+    </ion-item>
+    <ion-row no-padding class="top-border">
+        <ion-col text-right>
+            <button ion-button color="dark" clear small icon-start (click)="onCardClick('button')">
+                <ion-icon name="share-alt"></ion-icon>
+                Mehr erfahren
+            </button>
+        </ion-col>
+    </ion-row>
+</ion-card>

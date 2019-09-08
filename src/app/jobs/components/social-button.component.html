@@ -1,0 +1,16 @@
+<button ion-button large [ngSwitch]="type" [ngClass]="type" (click)="openLink()">
+    <ion-icon *ngSwitchCase="'email'" name="mail"></ion-icon>
+    <ion-icon *ngSwitchCase="'facebook'" name="logo-facebook"></ion-icon>
+    <ion-icon *ngSwitchCase="'homepage'" name="home"></ion-icon>
+    <ion-icon *ngSwitchCase="'instagram'" name="logo-instagram"></ion-icon>
+    <ion-icon *ngSwitchCase="'linkedin'" name="logo-linkedin"></ion-icon>
+    <ion-icon *ngSwitchCase="'twitter'" name="logo-twitter"></ion-icon>
+    <ng-container *ngSwitchCase="'xing'">
+        <ion-icon class="big-icon" name="ios-arrow-forward" style="margin-top: -3px; transform: scale(0.7, 0.8);">
+        </ion-icon>
+        <ion-icon class="big-icon" name="ios-arrow-back" style="margin-bottom: -3px; transform: scale(1, 1.5);">
+        </ion-icon>
+    </ng-container>
+    <ion-icon *ngSwitchCase="'youtube'" name="logo-youtube"></ion-icon>
+    <ion-icon *ngSwitchDefault name="warning"></ion-icon>
+</button>

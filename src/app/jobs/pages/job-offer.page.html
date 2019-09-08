@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="back"></ion-icon>
+    </button>
+    <ion-title *ngIf="jobOffer">{{ jobOffer.title }}</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <div class="description" *ngIf="jobOffer">
+    <div class="card-top">
+      <img [src]="company.appImageUrl">
+      <div class="caption">
+        <div class="subtitle">{{ company.name }}</div>
+        <div class="title">{{ jobOffer.title }}</div>
+      </div>
+    </div>
+    <div class="offer">
+      <ion-item text-wrap class="fact-item">
+        <h2>{{ jobOffer.type }}</h2>
+        <p>Art</p>
+      </ion-item>
+      <ion-item text-wrap class="fact-item">
+        <h2>{{ jobOffer.location }}</h2>
+        <p>Ort</p>
+      </ion-item>
+      <p [innerHTML]="jobOffer.description"></p>
+      <h3>Unternehmen</h3>
+      <p [innerHTML]="company.claim"> </p>
+      <img [src]="company.logoUrl" style="width: 50%;">
+      <p [innerHTML]="jobOffer.contactInfo"></p>
+      <div class="actions">
+        <button ion-button icon-start (click)="onPhoneClick(jobOffer.phoneNumber)" *ngIf="jobOffer.phoneNumber">
+          <ion-icon name="call"></ion-icon>Anruf
+        </button>
+        <button ion-button icon-start (click)="onMailClick(jobOffer.email, jobOffer.title)" *ngIf="jobOffer.email">
+          <ion-icon name="mail"></ion-icon>E-Mail
+        </button>
+      </div>
+    </div>
+  </div>
+</ion-content>

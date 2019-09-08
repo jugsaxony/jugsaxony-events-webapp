@@ -1,0 +1,67 @@
+.action-sheet-ios ion-icon.action-sheet-icon {
+    display: none;
+}
+
+ion-toast.danger {
+    .toast-wrapper {
+        background-color: darken(color($colors, danger, base), 25%);
+    }
+}
+
+.ios.standalone.iphonex {
+
+    .split-pane-side .footer,
+    .tabs:not(.tabs-ios[tabsPlacement=top]) .tabbar {
+        padding-bottom: $ios-standalone-home-indicator-height;
+    }
+}
+
+ion-app:not(.platform-core) {
+    .action-sheet-container {
+        .action-sheet-button-md {
+            animation: slidein 0.0s ease-in-out;
+        }
+
+        @for $i from 1 through 10 {
+            .action-sheet-button-md:nth-of-type(#{$i}) {
+                animation-duration: (0.1 + $i / 10)#{'s'};
+            }
+        }
+    }
+
+    .action-sheet-group.action-sheet-group-cancel {
+        .action-sheet-button-md {
+            animation: none;
+        }
+    }
+
+    @keyframes slidein {
+        from {
+            transform: translate(0, 100px);
+        }
+
+        to {
+            transform: none;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) and (min-height: 768px) {
+    .modal-wrapper {
+        left: 120px;
+        top: 40px;
+        position: absolute;
+        width: calc(100% - 240px);
+        height: calc(100% - 80px);
+    }
+
+    .toolbar-ios {
+        .segment-ios {
+            padding: 0 10px;
+
+            .segment-button {
+                max-width: 200px;
+            }
+        }
+    }
+}

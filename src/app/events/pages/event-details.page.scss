@@ -1,0 +1,59 @@
+page-event-details {
+    ion-navbar {
+        ion-buttons {
+            .sign-up {
+                margin: 0 6px;
+                padding: 0 5px !important;
+            }
+        }
+    }
+    button[disabled] {
+        opacity: initial;
+        filter: grayscale(25%);
+    }
+}
+
+.page-event-details {
+    .alert-message:empty {
+        padding: 0;
+    }
+    .alert-head,
+    .alert-input-group {
+        padding-bottom: 12px;
+    }
+    .alert-button-md.alert-button.ok-button {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+    .alert-wrapper div.alert-message+div {
+        overflow-y: auto;
+    }
+    .alert-button-group {
+        min-height: 56px;
+    }
+    &.alert-md {
+        .alert-input.invalid {
+            color: color($colors, danger, base);
+        }
+        .alert-input.invalid {
+            border-bottom: 1px solid color($colors, danger, base);
+        }
+        .alert-input.invalid:focus {
+            border-bottom: 2px solid color($colors, danger, base);
+        }
+    }
+    &.alert-ios {
+        .alert-input.invalid {
+            color: color($colors, danger, base);
+        }
+        .alert-input.invalid {
+            border: 0.55px solid color($colors, danger, base);
+        }
+    }
+    &.alert-wp {
+        .alert-input.invalid {
+            border: 2px solid color($colors, danger, base);
+            color: color($colors, danger, base);
+        }
+    }
+}

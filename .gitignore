@@ -1,0 +1,7 @@
+.sourcemaps/
+.tmp/
+node_modules/
+hooks/
+platforms/
+plugins/
+www/

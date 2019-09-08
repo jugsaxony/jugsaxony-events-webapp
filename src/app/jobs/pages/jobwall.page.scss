@@ -1,0 +1,48 @@
+page-jobwall {
+    ion-card {
+
+        .card-top {
+            position: relative;
+
+            img {
+                width: 100%;
+                display: block;
+            }
+
+            .caption {
+                position: absolute;
+                bottom: 0px;
+                left: 0;
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0.4);
+                padding: $jugs-card-padding-top $jugs-card-padding-end $jugs-card-padding-bottom $jugs-card-padding-start;
+
+                .title {
+                    font-size: 2.5rem;
+                    font-weight: bold;
+                    padding-top: 3px;
+                    color: #fff;
+                }
+
+                .subtitle {
+                    font-size: 1.6rem;
+                    line-height: 2.5rem;
+                    color: #fff;
+                }
+            }
+        }
+
+        .jobs {
+            .offers {
+                display: inline-block;
+                color: black;
+                display: inline;
+                overflow-wrap: break-word;
+            }
+        }
+
+        ion-row.top-border {
+            border-top: 1px solid lightgray;
+        }
+    }
+}

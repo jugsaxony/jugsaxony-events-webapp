@@ -1,0 +1,48 @@
+jug-navbar-activity-indicator {
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    overflow: hidden;
+    opacity: 0;
+    animation: navbar-activity-indicator-show 0.1s ease-in 2s 1 normal forwards;
+    &:before {
+        display: block;
+        position: absolute;
+        content: "";
+        left: -200px;
+        width: 100%;
+        height: 2px;
+        background-color: color($colors, primary, base);
+        animation: navbar-activity-indicator-progress 2s linear infinite;
+    }
+    @keyframes navbar-activity-indicator-show {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    @keyframes navbar-activity-indicator-progress {
+        from {
+            left: -200px;
+            width: 30%;
+        }
+        50% {
+            width: 30%;
+        }
+        70% {
+            width: 70%;
+        }
+        80% {
+            left: 50%;
+        }
+        95% {
+            left: 120%;
+        }
+        to {
+            left: 100%;
+        }
+    }
+}

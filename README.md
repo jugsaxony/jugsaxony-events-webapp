@@ -3,6 +3,10 @@ Progressive Web App auf Basis von Ionic 3 für den JUG Saxony Veranstaltungskale
 
 https://app.jugsaxony.org/
 
+## LIZENZ
+
+Apache License, Version 2.0 (https://www.apache.org/licenses/LICENSE-2.0)
+
 ## FAQ
 
 **Q**: Warum bekomme ich eine merkwürdige Meldung, wenn ich mich mit einer Gmail-Email-Adresse zu einer Veranstaltung anmelde?

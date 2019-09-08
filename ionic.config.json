@@ -1,0 +1,26 @@
+{
+  "name": "jugsaxony-events",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular",
+  "proxies": [
+    {
+      "path": "/api",
+      "proxyUrl": "https://app.jugsaxony.org/api"
+    },
+    {
+      "path": "/devapi",
+      "proxyUrl": "http://127.0.0.1:8080"
+    },
+    {
+      "path": "/wp/api",
+      "proxyUrl": "https://jugsaxony.org/wp-json/wp/v2"
+    },
+    {
+      "path": "/wp/media",
+      "proxyUrl": "https://jugsaxony.org/wp-content/uploads"
+    }
+  ],
+  "pro_id": "jugsaxony-events-webapp"
+}

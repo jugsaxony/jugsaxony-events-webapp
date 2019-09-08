@@ -1,0 +1,17 @@
+$font-path: "../assets/fonts";
+$app-direction: ltr;
+@import "ionic.globals";
+$colors: (
+  primary:    #00803d,
+  secondary:  #dd4411,
+  tertiary:   #6E8077,
+  danger:     #f53d3d,
+  light:      #f4f4f4,
+  dark:       #222
+);
+@import "ionic.theme.default";
+@import "ionic.ionicons";
+@import "roboto";
+@import "noto-sans";
+
+$ios-standalone-home-indicator-height: 20px;

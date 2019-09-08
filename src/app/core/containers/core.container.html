@@ -1,0 +1,48 @@
+<ion-split-pane>
+    <ion-menu [content]="content" class="jugs-side-menu">
+        <ion-content center text-center>
+            <div class="header">
+                <div class="logo">
+                    <img src="assets/icons/logo_512_ti.png" />
+                </div>
+                <h1>
+                    JUG Saxony
+                    <br/>
+                    <small>Veranstaltungen und Job Wall</small>
+                </h1>
+                <hr/>
+                <div>
+                    <small>{{version}}</small>
+                </div>
+                <hr/>
+                <ion-card>
+                    <ion-card-header>
+                        Dein Feedback ist gefragt!
+                    </ion-card-header>
+                    <ion-card-content>
+                        Du möchtest uns eine Anregung geben oder einen Fehler berichten,
+                        dann wende Dich bitte an <a href="mailto:dev@jugsaxony.org">dev@jugsaxony.org</a>
+                        oder erstelle ein Ticket im GitHub-Bugtracker.
+                    </ion-card-content>
+                    <ion-row no-padding class="top-border">
+                        <ion-col text-right>
+                            <a class="button" ion-button color="dark" clear small icon-start href="https://github.com/jugsaxony/jugsaxony-events-webapp/issues"
+                                target="_blank">
+                                <ion-icon name="logo-github"></ion-icon>
+                                jugsaxony-events-webapp
+                            </a>
+                        </ion-col>
+                    </ion-row>
+                </ion-card>
+                </div>
+        </ion-content>
+        <ion-footer center text-center>
+            <button ion-button menuToggle icon-start (click)="openAboutPage()">
+                <ion-icon name="contacts"></ion-icon>
+                Über uns
+            </button>
+        </ion-footer>
+    </ion-menu>
+
+    <ion-nav [root]="tabsContainer" #content swipeBackEnabled="false" main name="app"></ion-nav>
+</ion-split-pane>

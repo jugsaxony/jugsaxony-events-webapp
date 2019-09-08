@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      <span *ngIf="eventData$ | async as eventData; else loadingTitle">{{eventData.entity.title}}</span>
+      <ng-template #loadingTitel>
+        <span>Lade Details ...</span>
+      </ng-template>
+    </ion-title>
+    <ion-buttons end *ngIf="showHeaderRegistrationButton$ | async">
+      <button ion-button icon-only color="primary" class="sign-up" (click)="showSignUpDialog($event)">
+        <ion-icon name="log-in"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+  <jug-navbar-activity-indicator *ngIf="loading$ | async"></jug-navbar-activity-indicator>
+</ion-header>
+
+<ion-content no-bounce (ionScroll)="contentScrollHandler($event)">
+  <jug-event-facts [eventData]="eventData" (detailsClick)="showActionSheet(eventData, $event)" *ngIf="eventData$ | async as eventData">
+    <ion-fab right bottom *ngIf="registrationPossible$ | async">
+      <button ion-fab color="primary" title="Anmelden" [disabled]="pendingFabAction$ | async" (click)="showSignUpDialog($event)"
+        *ngIf="!eventData.registration" #floatingRegistrationButton>
+        <ion-icon name="log-in"></ion-icon>
+      </button>
+      <button ion-fab color="tertiary" title="Abmelden" [disabled]="pendingFabAction$ | async" (click)="showSignOutSheet($event)"
+        *ngIf="eventData.registration">
+        <ion-icon name="log-out"></ion-icon>
+      </button>
+      <jug-fab-activity-indicator *ngIf="pendingFabAction$ | async"></jug-fab-activity-indicator>
+    </ion-fab>
+  </jug-event-facts>
+</ion-content>

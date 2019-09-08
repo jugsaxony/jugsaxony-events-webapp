@@ -1,0 +1,54 @@
+jug-event-card {
+    ion-card {
+        .card-image {
+            position: relative;
+
+            .messages {
+                position: absolute;
+                z-index: 102;
+                top: $jugs-card-padding-end;
+                right: $jugs-card-padding-end;
+                text-align: right;
+                padding-left: $jugs-card-padding-start;
+
+                .button {
+                    white-space: initial;
+                    line-height: initial;
+                    height: initial;
+                    padding: 12px;
+                }
+            }
+
+            .caption {
+                position: absolute;
+                z-index: 101;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0.4);
+                padding: $jugs-card-padding-top $jugs-card-padding-end $jugs-card-padding-bottom $jugs-card-padding-start;
+
+                &.registered {
+                    background-color: rgba(color($colors, primary, base), 0.8);
+                }
+
+                .title {
+                    font-size: 2.5rem;
+                    font-weight: bold;
+                    padding-top: 3px;
+                    color: #fff;
+                }
+
+                .subtitle {
+                    font-size: 1.6rem;
+                    line-height: 2.5rem;
+                    color: #fff;
+                }
+            }
+        }
+
+        ion-row.top-border {
+            border-top: 1px solid lightgray;
+        }
+    }
+}

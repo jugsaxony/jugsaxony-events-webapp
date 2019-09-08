@@ -1,0 +1,50 @@
+social-button {
+    .button {
+        display: inline-block;
+        height: 4rem;
+        width: 4rem;
+        border-radius: 50%;
+        margin-left: 1rem;
+
+        .icon {
+            font-size: 2.5rem;
+        }
+
+        &.email,
+        &.email:hover:not(.disable-hover) {
+            background-color: white;
+            color: color($colors, primary, base);
+            border: 1px solid color($colors, primary, base);
+        }
+
+        &.facebook,
+        &.facebook:hover:not(.disable-hover) {
+            background-color: #3b5998;
+        }
+
+        &.instagram,
+        &.instagram:hover:not(.disable-hover) {
+            background-color: #cd486b;
+        }
+
+        &.linkedin,
+        &.linkedin:hover:not(.disable-hover) {
+            background-color: #0077b5;
+        }
+
+        &.twitter,
+        &.twitter:hover:not(.disable-hover) {
+            background-color: #00aced;
+        }
+
+        &.xing,
+        &.xing:hover:not(.disable-hover) {
+            background-color: #126567;
+        }
+
+        &.youtube,
+        &.youtube:hover:not(.disable-hover) {
+            background-color: #d34836;
+        }
+    }
+}

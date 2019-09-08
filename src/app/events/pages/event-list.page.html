@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      <span *ngIf="showCurrentOrFuture$ | async; else past">Veranstaltungen</span>
+      <ng-template #past>
+        <span>Vergangene Veranstaltungen</span>
+      </ng-template>
+      <jug-app-state></jug-app-state>
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="toggleShowCurrrentEvents()">
+        <ion-icon name="list"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+  <jug-navbar-activity-indicator *ngIf="loading$ | async"></jug-navbar-activity-indicator>
+</ion-header>
+
+<ion-content class="cards-bg social-cards" no-bounce>
+  <jug-event-card [eventData]="eventData" (cardClick)="showDetail(eventData)" (detailsClick)="showActionSheet(eventData, $event)" *ngFor="let eventData of eventDataList$ | async"></jug-event-card>
+  <jug-wanted-card *ngIf="showCurrentOrFuture$ | async"></jug-wanted-card>
+</ion-content>
