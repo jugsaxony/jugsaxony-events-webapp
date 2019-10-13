@@ -4,15 +4,24 @@ $jugs-card-padding-top: 21px;
 $jugs-card-padding-bottom: 21px;
 $jugs-card-padding-start: 16px;
 $jugs-card-padding-end: 13px;
+
 .scroll-content {
     overflow-y: auto;
+}
+
+@media (min-width: 768px) {
+    .ion-page .scroll-content {
+        background-color: #eee;
+    }
+    core-container .split-pane.split-pane-visible>.split-pane-side {
+        min-width: 336px;
+    }
 }
 
 @media (min-width: 992px) {
     .ion-page .scroll-content {
         padding-left: 20%;
         padding-right: 20%;
-        background-color: #eee;
     }
 }
 
@@ -21,15 +30,17 @@ $jugs-card-padding-end: 13px;
         padding-left: 25%;
         padding-right: 25%;
     }
+
     core-container .split-pane.split-pane-visible>.split-pane-side {
         max-width: 336px;
     }
 }
 
 .jugs-side-menu {
-    .menu-inner {
+    .content {
         background: linear-gradient(to bottom, $jugs-side-menu-color, $jugs-side-menu-color-light);
     }
+
     ion-content,
     .header::after,
     .footer::before,
@@ -37,12 +48,15 @@ $jugs-card-padding-end: 13px;
         background: initial;
         background-image: none;
     }
+
     .header .toolbar-background,
     .footer .toolbar-background {
         border: transparent;
     }
+
     .logo {
         padding: 32px 16px 16px;
+
         img {
             width: 50%;
             border-radius: 50%;
@@ -51,10 +65,45 @@ $jugs-card-padding-end: 13px;
             background-color: $jugs-side-menu-color-light;
         }
     }
+
     ion-card ion-row.top-border {
         border-top: 1px solid lightgray;
     }
+
     h1 {
         color: white;
+    }
+}
+
+.split-pane-visible {
+    .jugs-side-menu {
+        .menu-inner {
+            background-color: #e1e1e1;
+        }
+
+        .content {
+            background: initial;
+
+            .scroll-content {
+                margin-top: 56px;
+                overflow-y: hidden;
+
+                .jugs-side-menu-content {
+                    margin: 20px 20px 10px;
+                    border-radius: 5px;
+                    background: linear-gradient(to bottom, $jugs-side-menu-color, $jugs-side-menu-color-light);
+                    box-shadow: 2px 2px 5px 0px darkgrey;
+                    overflow-y: hidden;
+
+                }
+            }
+        }
+
+        .footer {
+            min-height: 56px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     }
 }

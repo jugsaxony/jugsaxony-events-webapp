@@ -75,3 +75,22 @@ page-company {
         font-size: 1.8rem;
     }
 }
+
+@media (min-width: 768px) {
+    job-offer-card {
+
+        .carousel-card {
+            width: calc(50% - 20px);
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    job-offer-card {
+
+        .carousel-card {
+            width: 20rem;
+            max-width: calc(50% - 20px);
+        }
+    }
+}

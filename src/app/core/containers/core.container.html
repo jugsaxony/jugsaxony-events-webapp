@@ -1,20 +1,20 @@
 <ion-split-pane>
     <ion-menu [content]="content" class="jugs-side-menu">
         <ion-content center text-center>
-            <div class="header">
+            <div class="jugs-side-menu-content">
                 <div class="logo">
                     <img src="assets/icons/logo_512_ti.png" />
                 </div>
                 <h1>
                     JUG Saxony
-                    <br/>
+                    <br />
                     <small>Veranstaltungen und Job Wall</small>
                 </h1>
-                <hr/>
+                <hr />
                 <div>
                     <small>{{version}}</small>
                 </div>
-                <hr/>
+                <hr />
                 <ion-card>
                     <ion-card-header>
                         Dein Feedback ist gefragt!
@@ -26,15 +26,16 @@
                     </ion-card-content>
                     <ion-row no-padding class="top-border">
                         <ion-col text-right>
-                            <a class="button" ion-button color="dark" clear small icon-start href="https://github.com/jugsaxony/jugsaxony-events-webapp/issues"
-                                target="_blank">
+                            <a class="button" ion-button color="dark" clear small icon-start
+                                href="https://github.com/jugsaxony/jugsaxony-events-webapp/issues" target="_blank">
                                 <ion-icon name="logo-github"></ion-icon>
                                 jugsaxony-events-webapp
                             </a>
                         </ion-col>
                     </ion-row>
                 </ion-card>
-                </div>
+
+            </div>
         </ion-content>
         <ion-footer center text-center>
             <button ion-button menuToggle icon-start (click)="openAboutPage()">
