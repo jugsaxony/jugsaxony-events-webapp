@@ -33,7 +33,7 @@ export class EventDetailsPage {
   private dialogInputs: InputEntry[] = [
     { key: 'firstName', label: 'Vorname', type: 'text' },
     { key: 'lastName', label: 'Nachname', type: 'text' },
-    { key: 'company', label: 'Unternehmen', type: 'text' },
+    { key: 'company', label: 'Unternehmen / Hochschule', type: 'text' },
     { key: 'emailAddress', label: 'Email-Adresse', type: 'email' }
   ];
 
