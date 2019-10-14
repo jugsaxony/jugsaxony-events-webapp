@@ -1,3 +1,14 @@
+## 0.3.0-beta (2019-05-19)
+
+### Features
+* Dark-Theme (wird via OS-Settings automatisch aktiviert)
+
+### Bug-Fixes
+* Bessere Desktop-Darstellung
+
+### Bekannte Probleme
+* unter iPadOS wird die App möglicherweise im Material-Design-Theme dargestellt; Safari meldet als User-Agent "Macintosh; Intel Mac OS X 10_15", wenn die Einstellung "Desktop-Webseite anfordern" aktiviert ist
+
 ## 0.2.6-beta (2019-05-19)
 
 ### Features
