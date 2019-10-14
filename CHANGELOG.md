@@ -1,4 +1,4 @@
-## 0.3.0-beta (2019-05-19)
+## 0.3.0-beta (2019-10-14)
 
 ### Features
 * Dark-Theme (wird via OS-Settings automatisch aktiviert)
