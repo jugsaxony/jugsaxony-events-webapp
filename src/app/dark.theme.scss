@@ -1,0 +1,215 @@
+@media (prefers-color-scheme: dark) {
+
+    .action-sheet-ios,
+    .action-sheet-md {
+        .action-sheet-title {
+            color: #aaa !important;
+        }
+
+        .action-sheet-group,
+        .action-sheet-cancel {
+            background-color: #444 !important;
+        }
+
+        .action-sheet-button {
+            color: #fff !important;
+        }
+    }
+
+    .action-sheet-ios {
+
+        .action-sheet-title,
+        .action-sheet-button {
+            border-bottom-color: #666;
+        }
+
+        .action-sheet-cancel {
+            color: #aaa;
+        }
+    }
+
+    ion-modal .ion-page .scroll-content {
+        background-color: #333;
+    }
+
+    .alert-md {
+        .alert-wrapper {
+            background-color: #444 !important;
+            color: #fff !important;
+
+            .alert-button {
+                color: lighten(color($colors, primary, base), 10%);
+            }
+
+            .alert-input {
+                color: #fff;
+            }
+        }
+    }
+
+    .alert-ios {
+        .alert-wrapper {
+            background-color: #555 !important;
+
+            .alert-button {
+                border-color: #666;
+                color: lighten(color($colors, primary, base), 10%);
+            }
+
+            .alert-input {
+                background-color: #777 !important;
+                border-color: #777;
+                color: #fff;
+
+                &::placeholder {
+                    color: #ddd;
+                    font-weight: normal;
+                }
+            }
+        }
+
+    }
+
+    ion-app,
+    .content {
+        background-color: #000;
+        color: #fff;
+    }
+
+    .split-pane-main {
+
+        .scroll-content,
+        .bar-button-default,
+        .bar-button-clear-default,
+        .bar-button-default {
+            color: #fff;
+        }
+
+        .bar-button-default:hover:not(.disable-hover),
+        .bar-button-clear-default:hover:not(.disable-hover),
+        .bar-button-default:hover:not(.disable-hover) {
+            color: #bbb;
+        }
+
+        .card,
+        .item,
+        jug-event-facts .description,
+        page-company .description,
+        page-job-offer .description {
+            color: #fff;
+            background-color: #333 !important;
+        }
+
+        job-offer-card .card {
+            background-color: #555 !important;
+
+            p {
+                color: #bbb;
+            }
+        }
+
+        jug-wanted-card .card {
+            p {
+                color: #eee;
+            }
+
+            .card-title {
+                color: #bbb;
+            }
+        }
+
+        .card h2 {
+            color: #eee !important;
+        }
+
+        .item p {
+            color: #bbb !important;
+        }
+
+        .card-top .caption,
+        .card-image .caption {
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        page-job-offer .card-top .caption,
+        jug-event-facts .card-top .caption {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        jug-event-card ion-card ion-row.top-border {
+            border-top: 1px solid #666;
+        }
+
+        .list .item-block .item-inner {
+            border-bottom: 1px solid #666;
+        }
+
+        .toolbar-background,
+        .tabs .tabbar {
+            background: #323639;
+        }
+
+        .toolbar-title {
+            color: #eee;
+        }
+
+        .button-clear {
+            color: #999 !important;
+        }
+
+        .button-clear:hover:not(.disable-hover) {
+            color: #eee !important;
+        }
+
+        .tabs .tab-button,
+        .tabs .tab-button-icon {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .tabs .tab-button[aria-selected=true],
+        .tabs .tab-button[aria-selected=true] .tab-button-icon {
+            color: lighten(color($colors, primary, base), 10%);
+        }
+    }
+
+    .split-pane-side {
+        .card.jugs-feedback {
+            color: #000;
+        }
+    }
+
+    .split-pane-visible {
+
+        &.split-pane>.split-pane-side {
+            border-right-color: #2a2a2a;
+        }
+
+        .jugs-side-menu {
+            .menu-inner {
+                background-color: #222 !important;
+            }
+
+            .content .scroll-content .jugs-side-menu-content {
+                box-shadow: initial !important;
+            }
+        }
+    }
+
+    @media (min-width: 768px) {
+
+        .split-pane-main {
+            .ion-page .scroll-content {
+                background-color: #111 !important;
+            }
+        }
+    }
+
+    @media (max-width: 991px) {
+
+        .split-pane-main {
+            .ion-page.tab-subpage .scroll-content {
+                background-color: #333 !important;
+            }
+        }
+    }
+}
