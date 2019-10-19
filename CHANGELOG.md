@@ -1,3 +1,8 @@
+## 0.3.1-beta (2019-10-19)
+
+### Features
+* Veranstaltungen teilen (via Web Share API)
+
 ## 0.3.0-beta (2019-10-14)
 
 ### Features
