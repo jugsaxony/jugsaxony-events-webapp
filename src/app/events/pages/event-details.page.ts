@@ -1,5 +1,6 @@
 import { Component, Renderer, ViewChild, NgZone, ChangeDetectionStrategy } from '@angular/core';
 import { FabButton, NavParams, AlertController, Alert, ActionSheetController, ActionSheet, ActionSheetButton, Platform } from 'ionic-angular';
+import { DatePipe } from '@angular/common';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 
@@ -44,6 +45,7 @@ export class EventDetailsPage {
     private platform: Platform,
     private actionSheetController: ActionSheetController,
     private alert: AlertController,
+    private datePipe: DatePipe,
     private pwaService: PWAService) {
     this.eventData$ = store.select(getEventDetailsEventDataState);
     this.registrationPossible$ = store.select(getEventDetailsRegistrationPossibleState);
@@ -179,6 +181,9 @@ export class EventDetailsPage {
       if (registrationPossible) {
         this.pushRegistrationAction(buttons, eventData);
       }
+      if ('share' in navigator) {
+        this.pushShareAction(buttons, eventData);
+      }
     }
     if (buttons.length === 0) {
       return;
@@ -238,6 +243,28 @@ export class EventDetailsPage {
         }
       });
     }
+  }
+
+  private pushShareAction(buttons: ActionSheetButton[], eventData: EventData): void {
+    buttons.push({
+      text: 'Mit anderen teilen',
+      icon: 'share',
+      handler: () => {
+        let navTransition = this.actionSheet.dismiss();
+        let nav: any = navigator;
+        let dateString = this.datePipe.transform(eventData.entity.startTime, "EEEE, dd. MMM y HH:mm");
+        let entity = eventData.entity;
+        let text = `JUG Saxony: ${entity.title},\n${entity.speaker},\n${dateString},\n${entity.site}, ${entity.address}\n`;
+        let url = `https://jugsaxony.org/veranstaltungen/${entity.id}/`;
+        nav.share({
+          title: entity.title,
+          text: text,
+          url: url
+        });
+        navTransition.then(() => this.actionSheet = null);
+        return false;
+      }
+    });
   }
 
   private validateSignUpData(alertDialog: Alert): boolean {
